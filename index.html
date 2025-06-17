@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blocksmith - Evidence-Based Debate Blocks</title>
+    <meta name="description" content="Blocksmith - For debaters, by debaters. Find evidence to counter arguments in debate rounds.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-cubes"></i>
+                <h1>Blocksmith</h1>
+            </div>
+            <p class="tagline">For debaters, by debaters</p>
+            <!-- Removed auth button that was dynamically added here -->
+        </header>
+
+        <main>
+            <section class="resolution-section">
+                <h2>Debate Resolution</h2>
+                <div class="input-group">
+                    <input type="text" id="resolution-input" placeholder="Enter the debate resolution...">
+                    <!-- Removed save resolution button -->
+                </div>
+                <!-- Removed saved resolutions list -->
+            </section>
+
+            <section class="debate-setup">
+                <div class="side-selection">
+                    <h2>Select Your Side</h2>
+                    <div class="side-buttons">
+                        <button id="affirmative" class="side-btn">Affirmative</button>
+                        <button id="negative" class="side-btn">Negative</button>
+                    </div>
+                </div>
+
+                <div class="argument-input">
+                    <h2>Opponent's Argument</h2>
+                    <textarea id="opponent-argument" placeholder="Enter the specific argument you need to respond to..."></textarea>
+                </div>
+
+                <button id="search-evidence" class="btn primary-btn">Find Evidence <i class="fas fa-search"></i></button>
+            </section>
+
+            <section class="results-section hidden">
+                <h2>Evidence Results</h2>
+                <div class="verification-badges">
+                    <span class="badge" id="resolution-relevance"><i class="fas fa-check-circle"></i> Resolution Relevance</span>
+                    <span class="badge" id="argument-relevance"><i class="fas fa-check-circle"></i> Argument Relevance</span>
+                    <span class="badge" id="source-reliability"><i class="fas fa-check-circle"></i> Source Reliability</span>
+                </div>
+
+                <div class="evidence-card">
+                    <div class="evidence-quote">
+                        <h3>Quote</h3>
+                        <blockquote id="evidence-quote-text">
+                            <!-- Evidence quote will appear here -->
+                        </blockquote>
+                    </div>
+
+                    <div class="evidence-source">
+                        <h3>Source</h3>
+                        <a href="#" id="source-link" target="_blank">Source Link</a>
+                        <p id="citation"><!-- Citation will appear here --></p>
+                    </div>
+
+                    <div class="evidence-actions">
+                        <button id="copy-block" class="btn primary-btn"><i class="fas fa-copy"></i> Copy Block</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
